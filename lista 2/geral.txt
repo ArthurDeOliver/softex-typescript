@@ -1,0 +1,15 @@
+1. Defina o que é uma variável na programação.
+    -Variável é um espaço da memória do computador reservado para armazenar informação
+
+2. Escreva com as suas palavras a diferença entre as declarações const, let e var e como elas podem
+ser aplicadas na prática.
+    -Variáveis const são Variáveis que não podem ser mudadas após serem atribuídas alguma informação nelas.
+    Variáveis let e var são diferentes, podem ser modificadas durante o código. Uma das maiores diferenças entre 
+    essas variáveis se encontra no escopo da qual elas atuam, var e const tem escopo global, diferente da let.
+
+3. Explique a diferença entre as variáveis do tipo objeto e lista.
+    -Variáveis do tipo objeto são variáveis com estrutura de chave e valor, possuíndo atributos e possibilitando
+    a criação de métodos para os objetos criados.
+    Listas são variáveis que possuem diversos espaços da memória para armazenas diversos dados, unicamente em cada
+    índice da lista.
+    
