@@ -1,7 +1,7 @@
 // let index = 0;
 // index < 10;
 // index ++;
-for (var index = 0; index < 10; index++) {
-    console.log("\u00EDndice de teste: ".concat(index));
+for (var index = 0; true; index++) {
+    console.log("A bomba vai explodi em: ".concat(index, "s"));
 }
-console.log("Continuação do código...");
+console.log("BOOOOMMM!!!!");
