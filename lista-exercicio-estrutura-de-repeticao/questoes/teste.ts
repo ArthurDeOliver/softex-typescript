@@ -6,5 +6,4 @@ for (let index = 0; true; index++) {
     console.log(`A bomba vai explodi em: ${index}s`);
     
 }
-
 console.log("BOOOOMMM!!!!");
