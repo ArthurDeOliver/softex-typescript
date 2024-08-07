@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula html</title>
+
+</head>
+
+<body>
+
+   <table border=""> <!--define a tabela-->
+
+    <thead><!--tag semântica de cabeçalho-->
+        <tr> <!-- define as linhas-->
+            <th>IdProduto</th> <!--header da tabela-->
+            <th>Nome</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+
+    <tbody><!--tag semântica de corpo da tabela-->
+        <tr>
+            <td>1</td> <!--informação da tabela-->
+            <td>banana</td>
+            <td>R$5,00</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td>maçã</td>
+            <td>R$25,00</td>
+        </tr>
+    
+        <tr>
+            <td>3</td>
+            <td>limão</td>
+            <td>R$15,00</td>
+        </tr>    
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">número de produtos: 3</td>
+        </tr>
+    </tfoot>
+   </table>
+
+   <hr>
+
+   <!--formulário-->
+   <form>
+
+    <label for="nome">Nome:</label>
+    <input type="password" id="nome" name="nome" title="nome" placeholder="digite o seu nome">
+
+    <br>
+    <br>
+
+    <label for="text">Mensagem</label>
+    <textarea name="text" id="text"></textarea>
+
+    <br>
+    <br>
+
+    <label for="lembrar">Lembrar</label>
+    <input type="checkbox" id="lembrar">
+
+    <label for="Masculino">Masculino</label>
+    <input type="radio" id="Masculino" name="genero">
+
+    <label for="Feminino">Feminino</label>
+    <input type="radio" id="Feminino" name="genero">
+
+    <select name="opcoes" id="op">
+        <option value="1">item1</option>
+        <option value="2">item2</option>
+        <option value="3">item3</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+
+   </form>
+   
+
+   
+</body>
+
+</html>
