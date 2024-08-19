@@ -1,0 +1,18 @@
+span{
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+}
+
+.nome-meio{
+    color: brown;
+}
+
+#nome-ultimo{
+    color: darkcyan;
+}
+
+.btn{
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
