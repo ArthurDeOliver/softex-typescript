@@ -1,6 +1,8 @@
 class Post {
 
     //atributos
+    // public .userName
+    // protected #userName
     private _userName: string;
     private _titulo : string;
     private _dataPostagem: Date;
