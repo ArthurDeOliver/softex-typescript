@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.caixa{
+    border: 1px solid black;
+    width: 200px;
+    height: 450px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.img-user{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
