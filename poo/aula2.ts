@@ -25,14 +25,24 @@ class Post {
         this._userName = nome;
     }
 
+    get titulo(){
+        return this._titulo;
+    }
+
+    set titulo(titulo:string){
+        this._titulo = titulo;
+    }
+
     //métodos
     incrementarCurtida(){
         this._numeroCurtidas += 1;
     }
 }
 
+//instância do objeto postagemArthur da classe Post
 const postagemArthur = new Post("Arthur", "foto");
 console.log(postagemArthur.userName);
 
+//metodo set userName para modificar o estado interno do objeto
 postagemArthur.userName = "angelo";
 console.log(postagemArthur.userName);
