@@ -2,6 +2,7 @@
     font-family: "Poppins", sans-serif;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     background-color: beige;
     /* border: 1px solid black; */
     width: 380px;
-    height: 550px;
+    min-height: 550px;
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -37,7 +38,7 @@ body {
 .img-user {
     border: 2px solid black;
     width: 40px;
-    height: 40px;
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +56,8 @@ img {
 }
 
 .follow {
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     color: rgb(0, 119, 255);
     padding: 3px 25px;
     border-radius: 5px;
@@ -73,10 +75,16 @@ img {
 
 .picture {
     background: linear-gradient(45deg, #fa931c 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    height: 55%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .insta-logo {
@@ -131,7 +139,17 @@ img {
     height: 20px;
 }
 
+.txt{
+    /* border: 1px solid black; */
+    max-height: 500px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
 .txt-footer {
+    font-size: 14px;
+    height: 100%;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 10px;
