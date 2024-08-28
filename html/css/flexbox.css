@@ -115,17 +115,15 @@ img {
     /* border: 1px solid black; */
 }
 
-.save {
-    /* border: 1px solid black; */
-    width: 20px;
-    height: 20px;
+.icon i{
+    font-size: 22px;
 }
 
 .icon-wrapper {
     /* border: 1px solid black; */
     /* height: ; */
     display: flex;
-    gap: 8px;
+    gap: 12px;
 }
 
 .like {
@@ -155,3 +153,9 @@ img {
     gap: 10px;
     padding: 0 10px;
 }
+
+button{
+    background-color: unset;
+    border: none;
+}
+
