@@ -52,9 +52,10 @@ const postArray : object[] = [];
 var postagem : object = {};
 
 for(let i = 0; i<= 15; i++){
+    
     const userName = faker.person.fullName();
     const txtPostagem = faker.lorem.word();
-    
+
     postagem = new Post(userName,txtPostagem);
     postArray.push(postagem);
 }
