@@ -1,8 +1,9 @@
 const span = document.getElementById("txt");
-const element = document.createElement("p");
-element.textContent = "meu texto";
+//criação de elemento html
+const element = document.createElement("p"); //elemento do tipo parágrafo   
+element.textContent = "meu texto"; //adicionando texto a esse parágrafo
 
-document.body.appendChild(element);
+document.body.appendChild(element); //adicionando no body o elemento criado
 
 const textoPost = prompt("Escreva o texto do seu post aqui");
 
