@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/revisao.css">
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/revisao.css" />
     <title>Revisão</title>
-</head>
+  </head>
 
-<body>
-    <button onclick="slider()">
+  <body>
+    <main>
+      <button onclick="slider()">
         <i class="fas fa-bars" id="btn-slide1"></i>
-    </button>
+      </button>
 
-    <div id="slide">
+      <div id="slide">
         <ul>
-            <li>link1</li>
-            <li>link2</li>
-            <li>link3</li>
-            <li>link4</li>
+          <li>link1</li>
+          <li>link2</li>
+          <li>link3</li>
+          <li>link4</li>
         </ul>
 
-        <button onclick="slider()">
-            <i class="fas fa-bars" id="btn-slide2"></i>
+        <button>
+          <i class="fas fa-bars" id="btn-slide2" onclick="slider()"></i>
         </button>
-    </div>
+      </div>
+    </main>
 
     <script src="jsRevisao.js"></script>
-</body>
-
-
+  </body>
 </html>

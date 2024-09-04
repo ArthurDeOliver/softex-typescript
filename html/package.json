@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "ts": "^0.2.2"
+  },
+  "devDependencies": {
+    "vite": "^5.4.3"
   }
 }
