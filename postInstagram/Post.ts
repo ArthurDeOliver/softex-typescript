@@ -51,7 +51,7 @@ class Post {
     //innerHTML permite escrever scripts HTML dentro do código, assim, dentro do main consigo criar um novo post
     newPost.innerHTML = `
 
-<div class="caixa">
+    <div class="caixa">
         <div class="header">
           <div class="user-info">
             <div class="img-user">
@@ -60,10 +60,11 @@ class Post {
             <span class="name-user">${this._userName}</span>
           </div>
 
-          <div class="follow-ret">
-            <span class="follow">follow</span>
-            <span class="ret">...</span>
-          </div>
+                 <!-- 
+        <div class="follow-ret">
+          <span class="follow">follow</span>
+          <span class="ret">...</span>
+        </div> -->
         </div>
 
         <div class="picture">

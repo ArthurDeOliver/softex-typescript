@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index1.css" />
+    <title>Carrossel e slider header</title>
+  </head>
+
+  <body>
+    <main>
+      <header onmouseover="slideOut()">
+        <div>
+          <span>Logo</span>
+        </div>
+
+        <ul id="slider">
+          <li>link1</li>
+          <li>link2</li>
+          <li>link3</li>
+        </ul>
+
+        <nav>
+          <ul id="navlinks">
+            <li id="link" onmouseover="slideIn()">link slider</li>
+            <li>link qualquer</li>
+            <li>link default</li>
+          </ul>
+        </nav>
+      </header>
+      <img
+        src="https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
+        alt=""
+        onmouseover="slideOut()"
+      />
+    </main>
+
+    <script src="index1.js"></script>
+  </body>
+</html>
