@@ -32,22 +32,28 @@ class Post {
   get numberOfLikes() {
     return this._numberOfLikes;
   }
+
   //métodos
   like() {
+    // console.log("teste");
     this._isLiked = !this._isLiked;
+    const postContainer = document.getElementById(this._id);
+    const btnLike = postContainer?.querySelector("#btn-like");
 
     if (this._isLiked) {
       this._numberOfLikes += 1;
     } else {
       this._numberOfLikes -= 1;
     }
+
+    console.log(btnLike);
+    console.log(this._isLiked);
   }
 
   toHTML() {
     const newPost = document.createElement("main"); //criação da tag main
     const body = document.getElementById("b"); //trazendo o body para o código
-    const teste = "teste";
-
+    newPost.id = this._id;
     //innerHTML permite escrever scripts HTML dentro do código, assim, dentro do main consigo criar um novo post
     newPost.innerHTML = `
 
@@ -108,6 +114,12 @@ class Post {
       <script src="buisness.ts"></script>
 
 `;
+
+    const btnLike = newPost.querySelector("#btn-like");
+    btnLike?.addEventListener("click", () => {
+      this.like();
+    });
+    console.log(newPost);
 
     body?.appendChild(newPost);
   }
