@@ -38,12 +38,23 @@ class Post {
     // console.log("teste");
     this._isLiked = !this._isLiked;
     const postContainer = document.getElementById(this._id);
-    const btnLike = postContainer?.querySelector("#btn-like");
+    const btnLike = postContainer?.querySelector("#btn-like i");
+    const qntLikes = postContainer?.querySelector("#qnt-like");
 
     if (this._isLiked) {
       this._numberOfLikes += 1;
+      (btnLike as HTMLElement).classList.remove("far");
+      (btnLike as HTMLElement).classList.add("liked");
+      (btnLike as HTMLElement).classList.add("fas");
+      (btnLike as HTMLElement).style.color = "red";
+      (qntLikes as HTMLElement).textContent = this._numberOfLikes.toString();
     } else {
       this._numberOfLikes -= 1;
+      (btnLike as HTMLElement).classList.remove("fas");
+      (btnLike as HTMLElement).classList.remove("liked");
+      (btnLike as HTMLElement).classList.add("far");
+      (btnLike as HTMLElement).style.color = "black";
+      (qntLikes as HTMLElement).textContent = this._numberOfLikes.toString();
     }
 
     console.log(btnLike);
@@ -54,6 +65,7 @@ class Post {
     const newPost = document.createElement("main"); //criação da tag main
     const body = document.getElementById("b"); //trazendo o body para o código
     newPost.id = this._id;
+
     //innerHTML permite escrever scripts HTML dentro do código, assim, dentro do main consigo criar um novo post
     newPost.innerHTML = `
 
@@ -65,12 +77,6 @@ class Post {
             </div>
             <span class="name-user">${this._userName}</span>
           </div>
-
-                 <!-- 
-        <div class="follow-ret">
-          <span class="follow">follow</span>
-          <span class="ret">...</span>
-        </div> -->
         </div>
 
         <div class="picture">
