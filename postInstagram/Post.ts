@@ -14,6 +14,7 @@ class Post {
   private _description: string;
   private _createdAt: Date = new Date();
   private _numberOfLikes: number = 0;
+  private _comments: string[] = [];
 
   //construtor
   constructor(
@@ -57,8 +58,35 @@ class Post {
       (qntLikes as HTMLElement).textContent = this._numberOfLikes.toString();
     }
 
-    console.log(btnLike);
-    console.log(this._isLiked);
+    // console.log(btnLike);
+    // console.log(this._isLiked);
+  }
+
+  comment() {
+    let comment: string = prompt("digite um comentário:");
+
+    if (comment && comment.trim() != "") {
+      this._comments.push(comment);
+      const postContainer = document.getElementById(this._id);
+      const footer = postContainer?.querySelector("#footer");
+
+      const divComment = document.createElement("div");
+      divComment.className = "comment";
+
+      divComment.innerHTML = `
+      
+          <div class="comment">
+            <span id="txt-comment"
+              >${comment}</span
+            >
+          </div>
+    `;
+
+      footer?.appendChild(divComment);
+    } else alert("campo vazio! digite um comentário");
+
+    console.log(this._comments);
+    // console.log(typeof comments);
   }
 
   toHTML() {
@@ -69,65 +97,75 @@ class Post {
     //innerHTML permite escrever scripts HTML dentro do código, assim, dentro do main consigo criar um novo post
     newPost.innerHTML = `
 
-    <div class="caixa">
-        <div class="header">
-          <div class="user-info">
-            <div class="img-user">
-              <img src="${this._avatarURL}" />
-            </div>
-            <span class="name-user">${this._userName}</span>
+     <div class="caixa">
+      <div class="header">
+        <div class="user-info">
+          <div class="img-user">
+            <img src="${this._avatarURL}" />
           </div>
-        </div>
-
-        <div class="picture">
-          <img src="${this._imageURL}" alt="" />
-        </div>
-
-        <div class="footer">
-          <div class="icon">
-            <div class="icon-wrapper">
-              <div id="div-botao">
-                <button onclick="like()" id="btn-like">
-                  <i class="far fa-heart" id="heart"></i>
-                </button>
-              </div>
-              <div>
-                <i class="far fa-comment"></i>
-              </div>
-              <div>
-                <i class="far fa-paper-plane"></i>
-              </div>
-            </div>
-
-            <i class="far fa-bookmark"></i>
-          </div>
-
-          <div class="txt-footer">
-            <div class="like">
-              <i class="fas fa-heart"></i>
-              <span id="qnt-like">${this._numberOfLikes}</span>
-              <span class="txt">likes</span>
-            </div>
-
-            <div class="txt">
-              <span id="txt"
-                >${this._description}</span
-              >
-            </div>
-          </div>
+          <span class="name-user">${this._userName}</span>
         </div>
       </div>
-      <script src="buisness.ts"></script>
+
+      <div class="picture">
+        <img src="${this._imageURL}" alt="" />
+      </div>
+
+      <div class="footer">
+        <div class="icon">
+          <div class="icon-wrapper">
+            <div id="div-botao">
+              <button onclick="like()" id="btn-like">
+                <i class="far fa-heart" id="heart"></i>
+              </button>
+            </div>
+            <button id = "btn-comment">
+              <i class="far fa-comment"></i>
+            </button>
+            <div>
+              <i class="far fa-paper-plane"></i>
+            </div>
+          </div>
+
+          <i class="far fa-bookmark"></i>
+        </div>
+
+        <div class="txt-footer" id="footer">
+          <div class="like">
+            <i class="fas fa-heart"></i>
+            <span id="qnt-like">${this._numberOfLikes}</span>
+            <span class="txt">likes</span>
+          </div>
+
+          <div class="txt">
+            <span id="txt"
+              >${this._description}</span
+            >
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="buisness.ts"></script>
+
 
 `;
 
+    //adicionando o evento para cada um dos posts separadamente
     const btnLike = newPost.querySelector("#btn-like");
+    const btnComment = newPost.querySelector("#btn-comment");
+
     btnLike?.addEventListener("click", () => {
       this.like();
     });
+
+    btnComment?.addEventListener("click", () => {
+      this.comment();
+    });
     console.log(newPost);
 
-    body?.appendChild(newPost);
+    body?.appendChild(newPost); //adicionando o post ao html
   }
 }
 
