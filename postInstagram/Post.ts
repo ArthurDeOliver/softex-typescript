@@ -63,7 +63,7 @@ class Post {
   }
 
   comment() {
-    let comment: string = prompt("digite um comentário:");
+    let comment: string | null = prompt("digite um comentário:");
 
     if (comment && comment.trim() != "") {
       this._comments.push(comment);
